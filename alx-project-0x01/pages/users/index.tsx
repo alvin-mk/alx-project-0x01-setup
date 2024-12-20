@@ -21,7 +21,7 @@ const Users: React.FC<{ users: UserData[] }> = ({ users }) => {
       <Header />
       <main className="p-4 flex-grow">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-semibold">User Directory</h1>
+          <h1 className="text-2xl font-semibold">User List</h1>
           <button
             onClick={() => setModalOpen(true)}
             className="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
