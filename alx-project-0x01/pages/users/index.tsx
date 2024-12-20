@@ -66,5 +66,5 @@ export async function getStaticProps() {
     },
   };
 }
-
+posts.map
 export default Users;
