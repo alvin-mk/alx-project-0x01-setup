@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { UserData, PostProps } from "@/interfaces";
 import { useState } from "react";
 
+
 const Users: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [userPosts, setUserPosts] = useState<PostProps[]>(posts);
@@ -59,5 +60,7 @@ export async function getStaticProps() {
     },
   };
 }
-
+////
+posts.map
+////
 export default Users;
