@@ -10,7 +10,10 @@ const Users: React.FC<{ users: UserData[] }> = ({ users }) => {
   const [userList, setUserList] = useState<UserData[]>(users);
 
   const handleAddUser = (newUser: UserData) => {
-    setUserList((prevUsers) => [...prevUsers, { ...newUser, id: prevUsers.length + 1 }]);
+    setUserList((prevUsers) => [
+      ...prevUsers,
+      { ...newUser, id: prevUsers.length + 1 },
+    ]);
   };
 
   return (
@@ -18,7 +21,7 @@ const Users: React.FC<{ users: UserData[] }> = ({ users }) => {
       <Header />
       <main className="p-4 flex-grow">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-semibold">User List</h1>
+          <h1 className="text-2xl font-semibold">User Directory</h1>
           <button
             onClick={() => setModalOpen(true)}
             className="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
@@ -28,7 +31,7 @@ const Users: React.FC<{ users: UserData[] }> = ({ users }) => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {userList.map((user) => (
-            <UserCard key={user.id} user={user} />
+            <UserCard key={user.id} {...user} />
           ))}
         </div>
       </main>
