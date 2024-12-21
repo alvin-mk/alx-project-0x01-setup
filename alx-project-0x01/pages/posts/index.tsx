@@ -54,5 +54,10 @@ export async function getStaticProps() {
     },
   };
 }
+/////
+
+const [post, setPost] = useState<PostData | null>(null)
+
+//////
 
 export default Posts;
