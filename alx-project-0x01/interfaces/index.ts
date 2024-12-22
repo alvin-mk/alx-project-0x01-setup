@@ -1,4 +1,12 @@
-// Interface for PostData
+// Interface for Post Properties
+export interface PostProps {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+// Interface for Post Data
 export interface PostData {
   userId: number;
   id?: number;
@@ -6,48 +14,14 @@ export interface PostData {
   body: string;
 }
 
-// Interface for PostProps
-export interface PostProps {
-  id: number;
-  userId: number;
-  title: string;
-  body: string;
-}
-
-// Interface for PostModalProps
+// Interface for Post Modal Props
 export interface PostModalProps {
   onClose: () => void;
   onSubmit: (post: PostData) => void;
 }
 
-// Interface for UserData
-export interface UserData {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: {
-    street: string;
-    suite: string;
-    city: string;
-    zipcode: string;
-    geo: {
-      lat: string;
-      lng: string;
-    };
-  };
-  phone: string;
-  website: string;
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
-  };
-}
-
-// Interface for UserProps
+// Interface for User Properties
 export interface UserProps {
-  id: number;
   name: string;
   username: string;
   email: string;
@@ -55,8 +29,8 @@ export interface UserProps {
   website: string;
 }
 
-// Interface for UserModalProps
+// Interface for User Modal Props
 export interface UserModalProps {
   onClose: () => void;
-  onSubmit: (user: UserData) => void;
+  onSubmit: (user: UserProps) => void; // Added for User Modal
 }
